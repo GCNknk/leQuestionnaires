@@ -1,0 +1,37 @@
+<h2>{{viewTitle}}</h2>
+
+<form action="/joueurs" method="POST" autocomplete="off">
+
+	<div class="form-group">
+		<label>Pseudo</label>
+		<input type="text" class="form-control" name="Pseudo" placeholder="Pseudo" value="{{joueur.Pseudo}}"
+			autocomplete="nickname">
+		<div class="text-danger">
+			{{joueur.PseudoError}}
+		</div>
+	</div>
+
+	<div class="form-group">
+		<label>email</label>
+		<input type="text" class="form-control" name="email" placeholder="email" value="{{joueur.email}}"
+			autocomplete="email">
+		<div class="text-danger">
+			{{joueur.emailError}}
+		</div>
+	</div>
+	<div class="form-group">
+		<div class="form-group col-md-6">
+			<label>Mot de passe </label>
+			<input type="password" class="form-control" name="mot de passe" placeholder="mot de passe" minlength="4"
+				value="{{joueur.motDePasse}}" autocomplete="current-password">
+			<div class="text-danger">
+				{{joueur.motDePasseError}}
+			</div>
+		</div>
+	</div>
+	<div class="form-group">
+		<button type="submit" class="btn btn-success">connection</button>
+	</div>
+
+
+</form>
