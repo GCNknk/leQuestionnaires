@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>CRUD</title>
+	<!-- CSS only -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+	<!-- JavaScript Bundle with Popper -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+		crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+	<link rel="stylesheet" href="/style2.css"></script>
+	
+</head>
+
+<body class="bg-dark" >
+	<div class="row">
+		<div class="col-md-6 offset-md-3" style="background-color:rgb(233, 14, 14);margin-top: 60px;padding:50px;">
+			{{{body}}}
+			<!-- ce body contiendra le html d'un views enfant
+			<script type="text/javascript">
+				document.getElementById("accesquiz").onclick = function () {
+					location.href = "quiz";
+				}-->
+	
+
+
+			
+		</div>
+	</div>
+
+<script type="text/javascript"> //permettre au body donc le html de charger avant que le js n'arrive
+  function chargerLeHtmlAvantJS() {
+      var element = document.createElement("script");
+      element.src = "/thequizz.js";
+      document.body.appendChild(element);
+  }
+
+  if (window.addEventListener)
+      window.addEventListener("load", chargerLeHtmlAvantJS, false);
+  else if (window.attachEvent)
+      window.attachEvent("onload", chargerLeHtmlAvantJS);
+  else window.onload = chargerLeHtmlAvantJS;
+
+  
+</script>
+
+</body>
+
+</html>
