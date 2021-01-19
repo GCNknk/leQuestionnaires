@@ -3,7 +3,7 @@ const mongoose = require ('mongoose');
 require('./questions.modele');
 
 
-mongoose.connect( process.env.ACCESA_BDD,{ useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify:false } , (Error)=> {
+mongoose.connect( 'mongodb+srv://David:davidtheDev@quiz.hl0xw.mongodb.net/Quiz?retryWrites=true&w=majority',{ useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify:false } , (Error)=> {
 
  if (! Error){ console.log('connection avec mongo reussie')} else { console.log('pas de connection:'+ Error)}
 }); 
