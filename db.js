@@ -1,13 +1,17 @@
-
-const mongoose = require ('mongoose');
+const mongoose = require('mongoose');
+const express= require('express'); 
+const app = express(); 
+const dotenv = require('dotenv').config({path:'../.env'});
 require('./questions.modele');
+ require('../.env');
+ require('../server'); 
 
 
-mongoose.connect( 'mongodb+srv://David:davidtheDev@quiz.hl0xw.mongodb.net/Quiz?retryWrites=true&w=majority',{ useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify:false } , (Error)=> {
-
- if (! Error){ console.log('connection avec mongo reussie')} else { console.log('pas de connection:'+ Error)}
+mongoose.connect(ACCESALABDD, { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify:false })
+.then(() => console.log('connection à MongoDB est ok'))
+.catch((error)=> {
+	return console.log(error.message);
 }); 
-
 
 //mongoose.connect(process.env.MONGO_URI,{ useNewUrlParser:true, useUnifiedTopology: true, } )
 
