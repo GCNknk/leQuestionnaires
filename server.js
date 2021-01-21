@@ -7,10 +7,6 @@ const exphbs = require('express-handlebars');
 const bodyparser = require('body-parser');
 
 
-const path = require('path');
-const exphbs = require('express-handlebars');
-const bodyparser = require('body-parser');
-
 
 const joueursControlleur = require('./controllers/joueursControlleur'); 
 
