@@ -1,1 +1,1 @@
-web: npm run go
+hublot: npm run go
