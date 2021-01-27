@@ -1,1 +1,1 @@
-hublot: npm run go
+hubot: npm run go
