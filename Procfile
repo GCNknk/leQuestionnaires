@@ -1,1 +1,1 @@
-hubot: npm run start
+web: npm run go
