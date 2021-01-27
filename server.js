@@ -35,7 +35,9 @@ mongoose.connect(connexionUrl, { useNewUrlParser: true, useUnifiedTopology: true
 	
 } catch (error) { console.log('error.message')};
 
-
+app.get('/', (req, res)=>{
+	res.send('bienvenue jeune developpeur');
+});
 
 
 app.use('/joueurs', joueursControlleur); 
